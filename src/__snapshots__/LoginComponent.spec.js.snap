@@ -1,0 +1,139 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LoginComponent UserInteractions should render correctly in "debug" mode 1`] = `
+<div
+  className="col-md-4"
+>
+  <Form
+    tag="form"
+  >
+    <FormGroup
+      tag="div"
+    >
+      <Label
+        for="exampleEmail"
+        tag="label"
+        widths={
+          Array [
+            "xs",
+            "sm",
+            "md",
+            "lg",
+            "xl",
+          ]
+        }
+      >
+        Email
+      </Label>
+      <Input
+        name="username"
+        onChange={[Function]}
+        placeholder="Username"
+        type="email"
+        value=""
+      />
+    </FormGroup>
+    <FormGroup
+      tag="div"
+    >
+      <Label
+        for="examplePassword"
+        tag="label"
+        widths={
+          Array [
+            "xs",
+            "sm",
+            "md",
+            "lg",
+            "xl",
+          ]
+        }
+      >
+        Password
+      </Label>
+      <Input
+        name="password"
+        onChange={[Function]}
+        placeholder="Password"
+        type="password"
+        value=""
+      />
+    </FormGroup>
+    <Button
+      color="secondary"
+      tag="button"
+    >
+      Submit
+    </Button>
+  </Form>
+</div>
+`;
+
+exports[`LoginComponent should render correctly in "debug" mode 1`] = `
+<div
+  className="col-md-4"
+>
+  <Form
+    tag="form"
+  >
+    <FormGroup
+      tag="div"
+    >
+      <Label
+        for="exampleEmail"
+        tag="label"
+        widths={
+          Array [
+            "xs",
+            "sm",
+            "md",
+            "lg",
+            "xl",
+          ]
+        }
+      >
+        Email
+      </Label>
+      <Input
+        id="exampleEmail"
+        name="email"
+        onChange={[Function]}
+        placeholder="with a placeholder"
+        type="email"
+      />
+    </FormGroup>
+    <FormGroup
+      tag="div"
+    >
+      <Label
+        for="examplePassword"
+        tag="label"
+        widths={
+          Array [
+            "xs",
+            "sm",
+            "md",
+            "lg",
+            "xl",
+          ]
+        }
+      >
+        Password
+      </Label>
+      <Input
+        id="examplePassword"
+        name="password"
+        onChange={[Function]}
+        placeholder="password placeholder"
+        type="password"
+      />
+    </FormGroup>
+    <Button
+      color="secondary"
+      tag="button"
+    >
+      Submit
+    </Button>
+  </Form>
+</div>
+`;
