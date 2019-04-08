@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import {Link} from 'react-router-dom';
+import {getMoviesList} from "./actions/loginActions";
 
 class LoginComponent extends Component {
     constructor(props) {
@@ -8,10 +10,13 @@ class LoginComponent extends Component {
             username: "",
             password: "",
             usernameError: "",
-            passwordError: ""
+            passwordError: "",
+            showChild: false
         }
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.toggleChild = this.toggleChild.bind(this);
+        this.getData = this.getData.bind(this);
     }
 
     handleChange(e) {
@@ -46,6 +51,15 @@ class LoginComponent extends Component {
         return true;
     }
 
+    toggleChild() {
+        this.setState({showChild: !this.state.showChild});
+    }
+
+    async getData() {
+        const data = await getMoviesList();
+        console.log("*********", data);
+    }
+
     render() {
         const {username, password, usernameError, passwordError} = this.state;
         return(
@@ -63,6 +77,16 @@ class LoginComponent extends Component {
                     </FormGroup>
                     <Button id="btn-submit">Submit</Button>
                 </Form>
+                <div className="toggleChild">
+                    <Button onMouseEnter={this.toggleChild} onMouseLeave={this.toggleChild} id="btn-toggle">Toggle Child</Button>
+                    {this.state.showChild ? <ul className="childs">
+                        <li>Child1</li>
+                        <li>Child2</li>
+                        <li>Child3</li>
+                    </ul> : null }
+                </div>
+                <Link className="user-login" to="/user-login">Login</Link>
+                <button onClick={this.getData}>GetMovies</button>
             </div>
         )
     }
